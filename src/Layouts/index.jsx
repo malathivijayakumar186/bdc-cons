@@ -1,3 +1,4 @@
+import Footer from '@/app/Footer';
 import NavBar from '@/app/NavBar'
 
 
@@ -6,9 +7,10 @@ const Layout = ({ children }) => {
 
   return (
     
-    <div lang="en">
+    <div >
       <NavBar/>
       <div >{children}</div>
+      <Footer/>
     </div>
   )
 };

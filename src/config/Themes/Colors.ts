@@ -1,0 +1,9 @@
+export const customCyan = '#10EBFA';
+export const greenColor = '#67b637';
+export const redColor = '#FF1957';
+export const blueColor = '#34F6FE';
+export const darkBlue = '#000f22';
+export const grey = '#a8a8a8';
+export const red = '#dc3545';
+export const white = '#ffffff';
+export const black = '#000'

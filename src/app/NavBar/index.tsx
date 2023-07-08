@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import style from './navbar.module.sass'
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
+    <div className={style.top}>NavBar</div>
   )
 }
 
