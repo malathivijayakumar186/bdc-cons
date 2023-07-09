@@ -10,7 +10,8 @@ const Page = () => {
   // const { HomePage} = useAppRoutes();
   return (
 <div>
-<MetaData title={`${PROJECT_TITLE}`} description='' />
+<MetaData title={`${PROJECT_TITLE}`} description=''/>
+
  <HomePage/>
   
 </div>
