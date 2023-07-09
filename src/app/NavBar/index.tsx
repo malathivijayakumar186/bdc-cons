@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import style from './navbar.module.sass'
 import "./index.css"
 import { logo, logo1 } from '@/config/AssetConstants';
@@ -13,94 +13,175 @@ import Home from '@mui/icons-material/Home';
 import Person from '@mui/icons-material/Person';
 import ListItemText from "@mui/material/ListItemText";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import StyledMenu from "./StyledMenu";
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import { Popover } from "@mui/material";
+
+
+
+
 
 const NavBar = () => {
   
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl1, setAnchorEl1] = useState(null);
+  const [anchorEl2, setAnchorEl2] = useState(null);
+
+ 
+  const open = Boolean(anchorEl);
+  const handleMenuClick = (e:any) => {
+    // setAnchorEl(e.currentTarget);
+    if (anchorEl !== e.currentTarget) {
+      setAnchorEl(e.currentTarget);
+    }
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    // props.onClick();
+  };
+
+ 
+  const opens = Boolean(anchorEl1);
+  const handleMenuClick1 = (e:any) => {
+    // setAnchorEl(e.currentTarget);
+    if (anchorEl1 !== e.currentTarget) {
+      setAnchorEl1(e.currentTarget);
+    }
+  };
+  const handleMenuClose1 = () => {
+    setAnchorEl1(null);
+    // props.onClick();
+  };
 
 
+  const opening = Boolean(anchorEl2); 
+  const handleMenuClick2 = (e:any) => {
+    // setAnchorEl(e.currentTarget);
+    if (anchorEl2 !== e.currentTarget) {
+      setAnchorEl2(e.currentTarget);
+    }
+  };
+  const handleMenuClose2 = () => {
+    setAnchorEl2(null);
+    // props.onClick();
+  };
 
   return (
 
     <div className={style.top}>
-    <img src={logo1} className={style.logoimg}/>
+    <img src={logo} className={style.logoimg}/>
 
 
 
     <Box component="nav" aria-label="My site" sx={{ flexGrow: 1 }}>
-      <List role="menubar" orientation="horizontal">
+       
+      <List role="menubar" orientation="horizontal" >
       {/* className={({ isActive }) => (isActive ?style.button : style.button1)} */}
         <ListItem role="none" >
           <ListItemButton
-            role="menuitem"
-            component="a"
-            href="#horizontal-list"
-            aria-label="Home"
+            role="menuitem"  className={style.ListItem1}
           >
-            <Home /> Home
+          Home
           </ListItemButton>
         </ListItem>
       
-        <ListItem role="none">
-          <ListItemButton role="menuitem" component="a" href="#horizontal-list">
-          <ListItemText
-              primary="Service"
-              primaryTypographyProps={{
-                fontWeight: "inherit",
-              }}
-            />
-            <ArrowDropDownIcon />
-           Commpany
-          </ListItemButton>
-        </ListItem>
-        <StyledMenu
-          id="simple-menu"
-          keepMounted
-          // anchorEl={anchorEl}
-          // anchorOrigin={{
-          //   vertical: "bottom",
-          //   horizontal: "left",
-          // }}
-          // open={Boolean(anchorEl)}
-          // onClose={handleMenuClose}
-          // MenuListProps={{ onMouseLeave: handleMenuClose }}
-          // disableRestoreFocus
-          // onClick={props.onClick}
+            
+        <ListItem role="none" >
+          <Button  id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleMenuClick}
+        className={style.ListItem}
         >
-          {sub.map((item, i) => (
-            <MenuItem
-              // onClick={() => {
-              //   handleMenuClose();
-              //   props.onClick;
-              // }}
-              // onClick={() => {
-              //   handleMenuClose();
-              //   handlePropClick();
-              // }}
-              // component={Link}
-              // to={item.link}
-              key={i}
-            >
-              {item.title}
-            </MenuItem>
-          ))}
-        </StyledMenu>
-      
-        <ListItem role="none">
-          <ListItemButton role="menuitem" component="a" href="#horizontal-list">
-          Services
-          </ListItemButton>
-        </ListItem>
+       
+           Company
+           <ArrowDropDownIcon />
 
+          </Button>
+        </ListItem>
+       
+        <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleMenuClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleMenuClose}>Who We Are</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Our Process</MenuItem>
+        <MenuItem onClick={handleMenuClose}>Become a Business arter</MenuItem>
+       
+      </Menu>
+     
+      <ListItem role="none" >
+          <Button  id="basic-button"
+        aria-controls={opens ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={opens ? 'true' : undefined}
+          onClick={handleMenuClick1}
+          className={style.ListItem}
+           >
+       
+           Services
+           <ArrowDropDownIcon />
+
+          </Button>
+        </ListItem>
+        <Menu
+        id="basic-menu"
+        anchorEl={anchorEl1}
+        open={opens}
+        onClose={handleMenuClose1}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleMenuClose1}>Construction,Design & Build</MenuItem>
+        <MenuItem onClick={handleMenuClose1}>Renovations,Additions & Alteration</MenuItem>
+        <MenuItem onClick={handleMenuClose1}>Aluminium & Glazing Works</MenuItem>
+        <MenuItem onClick={handleMenuClose1}>Metal Roofing</MenuItem>
+        <MenuItem onClick={handleMenuClose1}>Plumbing & Electrical Services</MenuItem>
+        <MenuItem onClick={handleMenuClose1}>Marble Collection For Sale</MenuItem>
+
+      </Menu>
+      <ListItem role="none" >
+          <Button  id="basic-button"
+        aria-controls={opening ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={opening ? 'true' : undefined}
+        onClick={handleMenuClick2}
+        className={style.ListItem}>
+       
+           Properties
+           <ArrowDropDownIcon />
+
+          </Button>
+        </ListItem>
+        <Menu
+        id="basic-menu"
+        anchorEl={anchorEl2}
+        open={opening}
+        onClose={handleMenuClose2}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleMenuClose2}>For Sale</MenuItem>
+        <MenuItem onClick={handleMenuClose2}> Under Construction</MenuItem>
+        <MenuItem onClick={handleMenuClose2}>Completed</MenuItem>
+      </Menu>
         
-        <ListItem role="none">
-          <ListItemButton role="menuitem" component="a" href="#horizontal-list">
+        <ListItem role="none" >
+          <ListItemButton className={style.ListItem1} role="menuitem" component="a" href="#horizontal-list">
          Insights
           </ListItemButton>
         </ListItem>
 
-        <ListItem role="none">
-          <ListItemButton role="menuitem" component="a" href="#horizontal-list">
+        <ListItem role="none" >
+          <ListItemButton className={style.ListItem1} role="menuitem" component="a" href="#horizontal-list">
          Conduct us
           </ListItemButton>
         </ListItem>
