@@ -9,7 +9,7 @@ const NavBar = () => {
     theme.breakpoints.down("md")
   );
   return (
-    <div className={style.top}>
+    <div>
       {isMobile ? <Mobileview /> : <Desktopview />}
     </div>
   );

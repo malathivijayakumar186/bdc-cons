@@ -66,7 +66,8 @@ const Desktopview = () => {
 
 
   return (
-    <div> <img src={logo} className={style.logoimg}/>
+    <div className={style.top}>
+      <img src={logo} className={style.logoimg}/>
     <Box component="nav" aria-label="My site" sx={{ flexGrow: 1 }} >
 
       <nav aria-label="main mailbox folders">       

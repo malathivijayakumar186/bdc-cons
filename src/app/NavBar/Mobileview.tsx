@@ -10,6 +10,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Button from '@mui/material/Button';
+import { Drawer } from "@mui/material";
+import NavBar from ".";
+
 const Mobileview = () => {
 
  
@@ -68,70 +71,35 @@ const Mobileview = () => {
     setAnchorEl2(null);
     // props.onClick();
   };
+  
 
+  
+  const [menulist,setMenulist] = useState(false);
 
-    
+  const Menulist =()=>{
+    setMenulist(true)
+  }
+  const onClose =()=>{
+    setMenulist(false)
+  }
+  
   return (
   
-      <div className={style.navtop}>
+      <div style={{ display:"flex",flexDirection:"column"}}>
+        <div className={style.navtop} >
         <img src={logo} className={style.logoimg} />
-        <MdOutlineMenu className={style.menuicon} onClick={OnMenuClick}  id="basic-button"
-        aria-controls={open1 ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open1 ? 'true' : undefined} />
-
-<Menu
-        id="basic-menu"
-        anchorEl={anchorEl3}
-        open={open1}
-        onClose={OnMenuClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={OnMenuClose} className={style.menuitem}> <ListItemButton
-            role="menuitem"  className={style.ListItem1}
-          >
-          HOME
-          </ListItemButton></MenuItem>
-
-
-        <MenuItem  className={style.menuitem}>  <Button  id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleMenuClick}
-        className={style.ListItem}
-        >
        
-           Company
-           <ArrowDropDownIcon />
+        <MdOutlineMenu className={style.menuicon} onClick={ Menulist }/>
+ 
 
-          </Button>  <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleMenuClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Who We Are</MenuItem>
-        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Our Process</MenuItem>
-        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Become a Business arter</MenuItem>
-       
-      </Menu></MenuItem>
-
-
-
-
-        <MenuItem onClick={OnMenuClose} className={style.menuitem}>Become a Business arter</MenuItem>
-       
-      </Menu>
-
-
-
-
+ </div>
+ 
+{menulist && (
+    <div>
+  <div onClick={onClose}>wertyui</div>
+  <div onClick={onClose}>wertasdytfuhoyui</div>
+ </div>
+ )}
       </div>
 
   );
