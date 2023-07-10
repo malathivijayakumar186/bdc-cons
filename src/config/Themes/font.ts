@@ -1,1 +1,1 @@
-export const Marcellus = 'Marcellus-Regular'
+export const Playfair = 'Playfair Display Regular'

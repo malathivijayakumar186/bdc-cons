@@ -5,7 +5,7 @@ const CustomTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: `${greenColor}`,
+      main: `#ffffff`,
     },
     secondary: {
       main: '#fff',
@@ -20,9 +20,9 @@ const CustomTheme = createTheme({
       xl: 1536,
     },
   },
-  typography: {
-    fontFamily: ['Marcellus-Regular'].join(','),
-  },
+  // typography: {
+  //   fontFamily: ['Playfair Display Regular'].join(','),
+  // },
 
   components: {
     MuiTypography: {

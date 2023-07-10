@@ -4,22 +4,26 @@ import "./index.css"
 import { logo, logo1 } from '@/config/AssetConstants';
 import { sub, sub2 } from "./Data";
 import MenuItem from "@mui/material/MenuItem";
-import Box from '@mui/joy/Box';
-import List from '@mui/joy/List';
-import ListDivider from '@mui/joy/ListDivider';
-import ListItem from '@mui/joy/ListItem';
-import ListItemButton from '@mui/joy/ListItemButton';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import Home from '@mui/icons-material/Home';
 import Person from '@mui/icons-material/Person';
 import ListItemText from "@mui/material/ListItemText";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-
+import { Theme, useMediaQuery } from "@mui/material";
+// import List from '@mui/joy/List';
+import {MdOutlineMenu} from "react-icons/md";
 
 
 const NavBar = () => {
   
+  const isMobile = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down("md")
+  );
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl1, setAnchorEl1] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
@@ -66,15 +70,25 @@ const NavBar = () => {
   return (
 
     <div className={style.top}>
+
+
+    
+     {isMobile ? (
+<div className={style.navtop}>
+     <img src={logo} className={style.logoimg}/> 
+     <MdOutlineMenu  className={style.menuicon} />
+     </div>
+     ) : (
+
+
+<>
     <img src={logo} className={style.logoimg}/>
-
-
-
     <Box component="nav" aria-label="My site" sx={{ flexGrow: 1 }} >
-       
-      <List role="menubar" orientation="horizontal" className={style.navright}>
+
+      <nav aria-label="main mailbox folders">       
+      <List   className={style.navright}>
      
-        <ListItem role="none" >
+        <ListItem role="none" style={{width:"11% !important"}}>
           <ListItemButton
             role="menuitem"  className={style.ListItem1}
           >
@@ -83,7 +97,7 @@ const NavBar = () => {
         </ListItem>
       
             
-        <ListItem role="none" >
+        <ListItem role="none" style={{width:"16% !important"}}>
           <Button  id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
@@ -113,7 +127,7 @@ const NavBar = () => {
        
       </Menu>
      
-      <ListItem role="none" >
+      <ListItem role="none"  style={{width:"14% !important"}}>
           <Button  id="basic-button"
         aria-controls={opens ? 'basic-menu' : undefined}
         aria-haspopup="true"
@@ -144,7 +158,7 @@ const NavBar = () => {
         <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Marble Collection For Sale</MenuItem>
 
       </Menu>
-      <ListItem role="none" >
+      <ListItem role="none"  style={{width:"17% !important"}} >
           <Button  id="basic-button"
         aria-controls={opening ? 'basic-menu' : undefined}
         aria-haspopup="true"
@@ -171,13 +185,13 @@ const NavBar = () => {
         <MenuItem onClick={handleMenuClose2}className={style.menuitem}>Completed</MenuItem>
       </Menu>
         
-        <ListItem role="none" >
+        <ListItem role="none"  style={{width:"12% !important"}}>
           <ListItemButton className={style.ListItem1} role="menuitem" component="a" href="#horizontal-list">
           INSIGHTS
           </ListItemButton>
         </ListItem>
 
-        <ListItem role="none" >
+        <ListItem role="none"  style={{width:"22% !important"}}>
           <ListItemButton className={style.ListItem2} role="menuitem" component="a" href="#horizontal-list" >
          CONDUCT US
           </ListItemButton>
@@ -185,8 +199,14 @@ const NavBar = () => {
 
         
       </List>
-    </Box>    
+      </nav>
+    </Box>  
+    </>
+    
+    )}
     </div>
+
+
   )
 }
 export default NavBar
