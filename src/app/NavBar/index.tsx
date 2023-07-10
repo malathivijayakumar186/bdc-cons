@@ -15,9 +15,6 @@ import ListItemText from "@mui/material/ListItemText";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import { Popover } from "@mui/material";
-
-
 
 
 
@@ -73,15 +70,15 @@ const NavBar = () => {
 
 
 
-    <Box component="nav" aria-label="My site" sx={{ flexGrow: 1 }}>
+    <Box component="nav" aria-label="My site" sx={{ flexGrow: 1 }} >
        
-      <List role="menubar" orientation="horizontal" >
-      {/* className={({ isActive }) => (isActive ?style.button : style.button1)} */}
+      <List role="menubar" orientation="horizontal" className={style.navright}>
+     
         <ListItem role="none" >
           <ListItemButton
             role="menuitem"  className={style.ListItem1}
           >
-          Home
+          HOME
           </ListItemButton>
         </ListItem>
       
@@ -110,9 +107,9 @@ const NavBar = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleMenuClose}>Who We Are</MenuItem>
-        <MenuItem onClick={handleMenuClose}>Our Process</MenuItem>
-        <MenuItem onClick={handleMenuClose}>Become a Business arter</MenuItem>
+        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Who We Are</MenuItem>
+        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Our Process</MenuItem>
+        <MenuItem onClick={handleMenuClose} className={style.menuitem}>Become a Business arter</MenuItem>
        
       </Menu>
      
@@ -139,12 +136,12 @@ const NavBar = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleMenuClose1}>Construction,Design & Build</MenuItem>
-        <MenuItem onClick={handleMenuClose1}>Renovations,Additions & Alteration</MenuItem>
-        <MenuItem onClick={handleMenuClose1}>Aluminium & Glazing Works</MenuItem>
-        <MenuItem onClick={handleMenuClose1}>Metal Roofing</MenuItem>
-        <MenuItem onClick={handleMenuClose1}>Plumbing & Electrical Services</MenuItem>
-        <MenuItem onClick={handleMenuClose1}>Marble Collection For Sale</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Construction,Design & Build</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Renovations,Additions & Alteration</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Aluminium & Glazing Works</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Metal Roofing</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Plumbing & Electrical Services</MenuItem>
+        <MenuItem onClick={handleMenuClose1}className={style.menuitem}>Marble Collection For Sale</MenuItem>
 
       </Menu>
       <ListItem role="none" >
@@ -169,20 +166,20 @@ const NavBar = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleMenuClose2}>For Sale</MenuItem>
-        <MenuItem onClick={handleMenuClose2}> Under Construction</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Completed</MenuItem>
+        <MenuItem onClick={handleMenuClose2}className={style.menuitem}>For Sale</MenuItem>
+        <MenuItem onClick={handleMenuClose2}className={style.menuitem}> Under Construction</MenuItem>
+        <MenuItem onClick={handleMenuClose2}className={style.menuitem}>Completed</MenuItem>
       </Menu>
         
         <ListItem role="none" >
           <ListItemButton className={style.ListItem1} role="menuitem" component="a" href="#horizontal-list">
-         Insights
+          INSIGHTS
           </ListItemButton>
         </ListItem>
 
         <ListItem role="none" >
-          <ListItemButton className={style.ListItem1} role="menuitem" component="a" href="#horizontal-list">
-         Conduct us
+          <ListItemButton className={style.ListItem2} role="menuitem" component="a" href="#horizontal-list" >
+         CONDUCT US
           </ListItemButton>
         </ListItem>
 
