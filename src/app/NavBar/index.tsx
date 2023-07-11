@@ -9,9 +9,9 @@ const NavBar = () => {
     theme.breakpoints.down("md")
   );
   return (
-    <div>
+    <>
       {isMobile ? <Mobileview /> : <Desktopview />}
-    </div>
+    </>
   );
 };
 export default NavBar;

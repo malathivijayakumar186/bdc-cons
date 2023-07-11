@@ -2,12 +2,16 @@
 import Box from "@mui/material/Box";
 import React from "react";
 import classes from "./Footer.module.sass";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import {BsFillFileEarmarkTextFill} from "react-icons/bs";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailIcon from "@mui/icons-material/Mail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useRouter } from "next/router";
-import { logo } from "@/config/AssetConstants";
+import { logo, logo1 } from "@/config/AssetConstants";
+import {AiFillInstagram} from "react-icons/ai";
+import {BsFacebook,BsTwitter} from "react-icons/bs";
+import {ImYoutube} from "react-icons/im";
+
 
 const Footer = () => {
  
@@ -15,7 +19,7 @@ const Footer = () => {
 
 
   return (
-    <Box className={router.pathname == "/" ? classes.root : classes.root1 }>
+    <Box className={classes.root}>
       <Box className={classes.contentSection}>
         <Box className={classes.imgtext}>
           <img
@@ -24,16 +28,17 @@ const Footer = () => {
             className={classes.logoImg}
           
           />
-          <span className={router.pathname == "/" ?classes.subtext:classes.subtext1}>
-            GET THE EMAIL NEWSLETTER AND UNLOCK ACCESS TO MEMBERS-ONLY CONTENT
-            AND UPDATES
+          <span className={classes.subtext}>
+          BDC construction , a bespoke landed homes developer & builder of holistic, inspiring properties for multi-generational living under one roof.
+
+
           </span>
           <div className={classes.socialicons}>
-            {/* <LinkedInIcon />
+            <LinkedInIcon />
             <AiFillInstagram />
             <BsFacebook />
             <BsTwitter />
-            <ImYoutube /> */}
+            <ImYoutube />
           </div>
         </Box>
         {/* <div className={classes.copyRight}>
@@ -46,25 +51,44 @@ const Footer = () => {
           <div className={classes.heading1}>Event Direct</div>
         </div> */}
         <Box className={classes.links}>
-          <Box sx={{ width: "118px" }}>
-            <div className={router.pathname == "/" ?classes.heading:classes.heading1 }>Company</div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>About us</div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>How it works</div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>Contact us</div>
+        <Box className={classes.links1} >
+            <div className={classes.heading }>SERVICES</div>
+            <div className={classes.footertext}>Construction, Design & Build</div>
+            <div className={classes.footertext}>Renovations, Additions & Alterations</div>
+            <div className={classes.footertext}>Aluminium & Glazing</div>
+            <div className={classes.footertext}>Metal Roofing</div>
+            <div className={classes.footertext}>Plumbing & Electrical</div>
+            <div className={classes.footertext}>Marble Collection For Sale</div>
           </Box>
-          <Box>
-            <div className={router.pathname == "/" ?classes.heading:classes.heading1}>Get in Touch</div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>
-              <LocationOnIcon className={router.pathname == "/" ?classes.icons:classes.icons1} />
-              Contact us
+          <Box  className={classes.links2}>
+         <div className={classes.heading }>PROPERTIES</div>
+            <div className={classes.footertext}>For Sale</div>
+            <div className={classes.footertext}>Under Construction</div>
+            <div className={classes.footertext}>Completed Projects</div>
+          </Box>
+          <Box className={classes.links3} >
+            <div className={classes.heading }>COMPANY</div>
+            <div className={classes.footertext}>Who We Are</div>
+            <div className={classes.footertext}>Our Process</div>
+            <div className={classes.footertext}>Become a Business Partner</div>
+            <div className={classes.footertext}>Insights</div>
+          </Box>
+          <Box className={classes.links4}>
+            <div className={classes.heading}>CONTACT US</div>
+           
+            <div className={classes.footertext}>
+              <WhatsAppIcon className={classes.icons}/>
+              WhatsApp Us
+
             </div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>
-              <WhatsAppIcon className={router.pathname == "/" ?classes.icons:classes.icons1}/>
-              +123456789
+            <div className={classes.footertext}>
+              <MailIcon className={classes.icons} />
+              Email Us
+
             </div>
-            <div className={router.pathname == "/" ?classes.footertext:classes.footertext1}>
-              <MailIcon className={router.pathname == "/" ?classes.icons:classes.icons1} />
-              test@gmail.com
+            <div className={classes.footertext}>
+              <BsFillFileEarmarkTextFill className={classes.icons} />
+              Online Form
             </div>
           </Box>
         </Box>

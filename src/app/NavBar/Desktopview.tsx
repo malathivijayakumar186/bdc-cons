@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import style from './navbar.module.sass'
 import "./index.css"
 import { logo, logo1 } from '@/config/AssetConstants';
-import { sub, sub2 } from "./Data";
 import MenuItem from "@mui/material/MenuItem";
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';

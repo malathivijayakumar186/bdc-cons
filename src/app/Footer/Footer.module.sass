@@ -3,11 +3,12 @@
 .root
     bottom: 0
     width: 100%
-    min-height: 60px
+    min-height: 80px
     color: rgb(0, 0, 0)
-    // background: linear-gradient( #C1C1C1,#C6C6C6 ) !important
+    background: linear-gradient( #C1C1C1,#C6C6C6 ) !important
     padding-bottom: 8px
     z-index: 1000
+
 .root1
     bottom: 0
     width: 100%
@@ -18,22 +19,27 @@
     z-index: 1000
 
 .logoImg
-    width: 45%
+    width: 60%
     margin-bottom: 0px
     cursor: pointer
     +xs
-        margin: 0
-
+        margin: 0px 45px
+    +s
+        margin: 0px 45px
 .contentSection
     display: flex
     align-items: center
-    padding: 40px 0px
-    gap: 30%
+    padding: 60px 0px
+    gap: 20px
     bottom: 0
-    margin: 0 61px
+    margin: 0 60px
     +xs
         flex-direction: column
         align-items: start
+    +s
+        flex-direction: column
+        align-items: start
+        margin: 45px
 
 .copyRight
     color: white
@@ -42,7 +48,7 @@
         color: #26acd7
 .footertext
     +commonFont
-    font-size: 19px
+    font-size: 18px
     font-weight: 400
     margin: 25px 0
     gap: 12px
@@ -52,7 +58,7 @@
         font-size: 16px
 .footertext1
     +commonFont
-    font-size: 19px
+    font-size: 18px
     font-weight: 400
     margin: 25px 0
     gap: 12px
@@ -60,9 +66,9 @@
     color: white
 .heading
     +commonFont
-    font-size: 28px
+    font-size: 22px
     margin-bottom: 15px
-    font-weight: 700
+    font-weight: 600
     color: black
     +sm
         font-size: 19px
@@ -82,7 +88,7 @@
     font-size: 20px !important
     font-weight: 400 !important
     color: #202020
-    width: 398px
+    width: 276px
     +sm
         width: 100%
 .subtext1
@@ -99,17 +105,43 @@
     display: flex
     flex-direction: column
     gap: 23px
+    width: 30%
+    +s
+        width: 100%
+
 .socialicons
     display: flex
     gap: 25px
     font-size: 24px
 .links
     display: flex
-    gap: 117px
+    gap: 60px
     +sm
-    display: flex !important
-    margin-top: 20px !important
+        display: flex !important
+        flex-direction: column
+        // margin-top: 20px !important
+    +s
+        display: flex !important
+        flex-direction: column
+        gap: 12px
     +xs
         display: flex
+        flex-direction: column
         gap: 16px
         margin-top: 20px
+.links1
+    width:188px !important
+    +s
+        width:270px !important
+.links2
+    width:158px !important
+    +s
+        width:270px !important
+.links3
+    width:158px !important
+    +s
+        width:270px !important
+.links4
+    width:158px !important
+    +s
+        width:270px !important
