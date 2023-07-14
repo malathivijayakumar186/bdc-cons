@@ -1,36 +1,51 @@
 @import "../../app/helpers"
 .homevideo
-    // width: 100%
-    // height: 90vh 
-    margin: 0px 42px
+    margin: 5px 121px
+    width: 82%
+    height: 583px
 .homehead
     color: #000
     position: absolute
     top: 210px
+    width: 100%
     +commonFont
+
 .homehead1
-    width: 56%
+    width: 55%
     font-size: 50px
     font-weight: 400
     padding: 0px 300px 3px 273px
     text-align: center
-    +commonFont
+    +useItalic
+
 .homeimg
     width: 100%
     height: 82vh
     padding-bottom: 5px
     margin: 0px
+    // animation: zoom-in-out 12s ease infinite
+@keyframes zoom-in-out
+    0%
+        transform: scale(1, 1)
+
+    50%
+        transform: scale(1.1, 1.1)
+
+    100%
+        transform: scale(1, 1)
+
 .subhead
     display: flex
-    padding: 22px 250px
+    padding: 45px 250px
+    +commonItalic
 .subhead1
-    width: 275px
+    width: 290px
     font-size: 24px
     border-right: 2px solid #000
     text-align: center
 
 .subhead2
-    width: 287px
+    width: 321px
     font-size: 24px
     border-right: 2px solid #000
     text-align: center
@@ -38,28 +53,16 @@
     width: 287px
     font-size: 24px
     text-align: center
-    left: before
-    // background: linear-gradient(to right,rgba(250,249,248,.95) 45%,rgba(250,249,248,0) 75%,rgba(250,249,248,0) 50%)
-    // content: ""
-    // position: absolute
-    // top: 0
-    // left: 0
-    // right: 0
-    // bottom: 0
-    // background: rgba(250,249,248,.9)
+
 .homeimg1
     width: 100%
     height: 68vh
     position: absolute
-// .text1
-//     background-image: url("../../../public/Images/bg.png") !important
-//     width: 10%
-//     height: 10vh
-//     padding: 20px
 .homepart
     display: flex
-    padding: 10px 0px
-    padding-bottom: 25px
+    padding: 25px 0px
+
+    // padding-bottom: 25px
 .homepart1
     display: flex
     flex-direction: column
@@ -74,6 +77,8 @@
     width: 100%
     height: 68vh
     position: absolute
+    background: #ff780014
+
 .headtext1
     +commonFont
     position: relative
@@ -102,10 +107,19 @@
     width: 42%
     padding: 0px 5px
 .headtext14
-    +commonItalic
-    padding: 53px 84px
-    font-size: 41px
+    +useItalic
+    padding: 70px 84px
+    font-size: 33px
     color: #ff7800
+    line-height: 50px
+.headtext15
+    +useItalic
+    padding-left: 30px
+    font-size: 25px
+    text-align: right
+    margin-right: 38px
+    padding-top: 25px
+    color: #000
 
 .homeimg21
     width: 558px

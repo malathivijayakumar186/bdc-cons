@@ -10,7 +10,7 @@ const MetaData = (props: MetaDataProps) => {
     <Head>
       <title>{props.title}</title>
       <meta name='description' content={props.description} />
-      {/* <link rel='icon' href='/favicon.png' /> */}
+      <link rel='icon' href='/favicon.png' />
     </Head>
   );
 };

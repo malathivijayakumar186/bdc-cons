@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div style={{width:"100%",overflowX:"hidden"}}>
       <ThemeProvider theme={CustomTheme}>
         <NavBar />
-        <div style={{width:"100%",marginTop:"92px",}}>{children}</div>
+        <div style={{width:"100%",marginTop:"92px",overflowX:"hidden"}}>{children}</div>
         <Footer />
       </ThemeProvider>
     </div>
