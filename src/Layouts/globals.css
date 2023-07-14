@@ -31,7 +31,18 @@
     --overflow-x: hidden;
 
     } */
-    
-    body {
-      margin: 0;
-    }
+
+body {
+  margin: 0;
+}
+
+.pattern-dots-md {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: calc(10 * 1px) calc(10 * 1px);
+  color: lightgrey;
+}
+
+.g-0 {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}

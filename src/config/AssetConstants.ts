@@ -3,3 +3,7 @@ export const logo ='/Images/BDC.png';
 export const logo1 ='/Images/BDC1.png';
 export const homevideo = '/Images/homevideo.mp4';
 export const homeimg='/Images/homeimg.jpg';
+export const homeimg1='/Images/homeimg1.jpg';
+export const homeimg11='/Images/bg.png';
+export const homeimg2='/Images/homeimg2.jpg';
+
