@@ -9,6 +9,8 @@ export const homeimg2='/Images/homeimg2.jpg';
 export const homeimg3='/Images/homeimg3.jpg';
 export const homeimg4='/Images/homeimg4.jpg';
 export const homeimg5='/Images/homeimg5.jpg';
+export const homeimg6='/Images/homeimg6.jpg';
+
 
 
 
