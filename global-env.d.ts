@@ -1,0 +1,10 @@
+declare module '@metamask/jazzicon';
+declare module 'faker';
+declare module '@date-fns/addDays';
+declare module '@material-ui/pickers';
+declare module 'firebase/compat/app';
+declare module 'firebase/database';
+declare module 'firebase/auth';
+declare module 'react-adsense-ad';
+declare module 'react-lottie';
+declare module 'react-credit-card-input'

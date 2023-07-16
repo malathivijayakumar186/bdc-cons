@@ -3,12 +3,14 @@ import NavBar from "@/app/NavBar";
 import CustomTheme from "@/config/Themes/Theme";
 import { ThemeProvider } from "@mui/material";
 import "./globals.css"
-const Layout = ({ children }) => {
+
+const Layout = ({ children}) => {
   return (
-    <div style={{width:"100%",overflowX:"hidden"}}>
+    <div style={{width:"100%",overflow:"hidden"}}>
       <ThemeProvider theme={CustomTheme}>
         <NavBar />
-        <div style={{width:"100%",marginTop:"92px",}}>{children}</div>
+       
+        <div  style={{width:"100%",marginTop:"92px",overflow:"hidden"}}>{children}</div>
         <Footer />
       </ThemeProvider>
     </div>

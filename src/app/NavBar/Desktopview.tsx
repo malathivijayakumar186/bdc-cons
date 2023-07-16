@@ -72,7 +72,7 @@ const Desktopview = () => {
       <nav aria-label="main mailbox folders">       
       <List   className={style.navright}>
      
-        <ListItem role="none" style={{width:"11% !important"}}>
+        <ListItem role="none" style={{width:"10% !important"}}>
           <ListItemButton
             role="menuitem"  className={style.ListItem1}
           >
@@ -177,7 +177,7 @@ const Desktopview = () => {
 
         <ListItem role="none"  style={{width:"22% !important"}}>
           <ListItemButton className={style.ListItem2} role="menuitem" component="a" href="#horizontal-list" >
-         CONDUCT US
+         CONTACT US
           </ListItemButton>
         </ListItem>
 
