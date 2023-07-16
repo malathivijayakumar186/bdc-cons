@@ -91,12 +91,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <video controls className={style.homevideo}>
           <source src="/Images/homevideo.mp4" type="video/mp4" />
-          {/* <button onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</button> */}
+          <button onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</button>
         </video>
-      </div>
+      </div> */}
 
       <div className={style.hometext2}>
         <div className={style.hometext21}>
@@ -122,8 +122,8 @@ const HomePage = () => {
                 For Sale
               </div>
               <div className={style.text26}>
-                <IoIosArrowForward className={style.greaticon} /> Under
-                Construction
+                <IoIosArrowForward className={style.greaticon} />
+                Under Construction
               </div>
               <div className={style.text26}>
                 <IoIosArrowForward className={style.greaticon} />
