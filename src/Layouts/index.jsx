@@ -3,7 +3,8 @@ import NavBar from "@/app/NavBar";
 import CustomTheme from "@/config/Themes/Theme";
 import { ThemeProvider } from "@mui/material";
 import "./globals.css"
-const Layout = ({ children }) => {
+
+const Layout = ({ children}) => {
   return (
     <div style={{width:"100%",overflow:"hidden"}}>
       <ThemeProvider theme={CustomTheme}>
